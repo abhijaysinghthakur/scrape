@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanning Competitor...</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="scan-container">
+        <a href="/" class="back-link">← Back to Dashboard</a>
+        
+        <div class="scan-header">
+            <h1>Scanning Competitor 📡</h1>
+            <p>{{ competitor.url }}</p>
+        </div>
+
+        <div id="progress-log" class="progress-log">
+            </div>
+        
+        <div id="report-content" class="report-content" style="display: none;">
+            </div>
+
+    </main>
+    <script src="{{ url_for('static', filename='scan.js') }}"></script>
+</body>
+</html>

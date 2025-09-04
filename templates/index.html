@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Watch Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Competitor Watch Dashboard 🕵️</h1>
+        
+        <div class="suggestion-box">
+            <h2>Need ideas?</h2>
+            <p>Enter your e-commerce store URL and the agent will suggest competitors for you.</p>
+            <form id="suggest-form">
+                <input type="text" id="user-url" placeholder="Enter your store URL...">
+                <button type="submit">Find Competitors</button>
+            </form>
+            <div id="suggestions-loader" class="loader" style="display: none;"></div>
+            <div id="suggestions-result"></div>
+        </div>
+        <h2>Add New Competitor Manually</h2>
+        <form id="add-competitor-form">
+            <input type="text" id="competitor-url" placeholder="https://www.example-shop.com" required>
+            <button type="submit">Add & Track</button>
+        </form>
+        
+        <h2>Tracked Competitors</h2>
+        <div id="competitor-list">
+            </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

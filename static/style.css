@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #121212;
+    --bg-light: #1E1E1E;
+    --border-color: #333333;
+    --text-primary: #EAEAEA;
+    --text-secondary: #AAAAAA;
+    --accent-glow: #00FF99; /* Bright Neon Green */
+    --accent-secondary: #9E56F7; /* Bright Purple */
+    --danger-color: #FF4171;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    text-shadow: 0 0 5px rgba(0, 255, 153, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+button, .action-btn {
+    background: transparent;
+    color: var(--accent-glow);
+    border: 1px solid var(--accent-glow);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .action-btn:hover {
+    background-color: var(--accent-glow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    font-family: 'Roboto Mono', monospace;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.suggestion-box {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: left;
+}
+.suggestion-box h2 {
+    border: none;
+    text-shadow: none;
+}
+#suggestions-result li {
+    background: var(--bg-dark);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+#suggestions-result button {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#competitor-list {
+    margin-top: 20px;
+}
+.competitor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.competitor-item .actions button,
+.competitor-item .actions .action-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+.scan-btn {
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+.scan-btn:hover {
+    background-color: var(--accent-secondary);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(158, 86, 247, 0.5);
+}
+.delete-btn {
+    border-color: var(--danger-color);
+    color: var(--danger-color);
+}
+.delete-btn:hover {
+    background-color: var(--danger-color);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(255, 65, 113, 0.5);
+}
+
+/* Scan Result Page Styles */
+.scan-container {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--accent-glow);
+    text-decoration: none;
+    font-weight: 500;
+}
+.scan-header p {
+    color: var(--text-secondary);
+    font-size: 1.2em;
+    margin: 0;
+}
+.progress-log {
+    background-color: #000;
+    color: var(--accent-glow);
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    min-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+}
+.report-content h3 {
+    color: var(--accent-secondary);
+    border-bottom: 1px solid var(--accent-secondary);
+}
