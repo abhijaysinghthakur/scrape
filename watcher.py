@@ -4,9 +4,9 @@ from bs4 import BeautifulSoup
 import json
 import os
 import openai
-from dotenv import load_dotenv
 
-load_dotenv()
+
+
 IO_API_KEY = os.getenv("IO_API_KEY")
 
 io_client = openai.OpenAI(
