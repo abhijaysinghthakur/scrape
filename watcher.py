@@ -6,14 +6,15 @@ import os
 import openai
 
 
-
 IO_API_KEY = os.getenv("IO_API_KEY")
+
+if not IO_API_KEY:
+    raise ValueError("API key not found. Please set the IO_API_KEY environment variable on Vercel.")
 
 io_client = openai.OpenAI(
     api_key=IO_API_KEY,
     base_url="https://api.intelligence.io.solutions/api/v1/",
 )
-
 def scrape_products(url):
     try:
         response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
