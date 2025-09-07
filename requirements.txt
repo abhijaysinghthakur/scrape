@@ -3,4 +3,3 @@ requests
 beautifulsoup4
 googlesearch-python
 openai
-python-dotenv
